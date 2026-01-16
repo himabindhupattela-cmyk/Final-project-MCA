@@ -1,216 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MCA Project – Spam Detection</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --bg: #0f0f23;
-      --card: #1a1a35;
-      --accent: #00d9ff;
-      --accent2: #7c3aed;
-      --text: #e2e8f0;
-      --muted: #94a3b8;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      overflow: hidden;
-    }
-
-    .slide {
-      width: 100vw;
-      height: 100vh;
-      padding: 80px;
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .slide.active {
-      display: flex;
-    }
-
-    h1 {
-      font-size: 3.2rem;
-      color: var(--accent);
-    }
-
-    h2 {
-      font-size: 2.4rem;
-      color: var(--accent2);
-    }
-
-    p, li {
-      font-size: 1.3rem;
-      color: var(--text);
-      line-height: 1.8;
-    }
-
-    ul {
-      margin-top: 15px;
-      padding-left: 25px;
-    }
-
-    .footer {
-      position: absolute;
-      bottom: 20px;
-      right: 40px;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 6px 14px;
-      background: rgba(0,217,255,0.15);
-      color: var(--accent);
-      border-radius: 20px;
-      font-size: 0.9rem;
-      margin-bottom: 15px;
-      width: fit-content;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Spam Detection System</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+.slide {
+  display: none;
+  height: 100vh;
+  padding: 80px;
+}
+.slide.active {
+  display: block;
+}
+h1 { color: #38bdf8; font-size: 48px; }
+h2 { color: #a78bfa; font-size: 36px; }
+p, li { font-size: 22px; line-height: 1.6; }
+.footer {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  color: #94a3b8;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- Slide 1 -->
-  <section class="slide active">
-    <span class="badge">Major Project</span>
-    <h1>Spam Detection System</h1>
-    <p>Machine Learning based Email Classification</p>
-    <p><b>Student:</b> Pattela Himabindhu</p>
-    <p><b>Course:</b> MCA</p>
-  </section>
+<div class="slide active">
+  <h1>Spam Detection System</h1>
+  <p>Machine Learning Based Text Classification</p>
+  <p><b>Course:</b> MCA</p>
+  <p><b>Tools:</b> Python, Scikit-learn</p>
+</div>
 
-  <!-- Slide 2 -->
-  <section class="slide">
-    <h2>Project Overview</h2>
-    <p>
-      This project focuses on building a <b>Spam Detection System</b> using
-      Machine Learning techniques to classify emails as <b>Spam</b> or <b>Not Spam</b>
-      based on their content.
-    </p>
-  </section>
+<div class="slide">
+  <h2>Project Overview</h2>
+  <p>This project detects spam messages using Machine Learning techniques.</p>
+</div>
 
-  <!-- Slide 3 -->
-  <section class="slide">
-    <h2>Abstract</h2>
-    <ul>
-      <li>Uses labeled email dataset</li>
-      <li>Text preprocessing techniques applied</li>
-      <li>Feature extraction using CountVectorizer / TF-IDF</li>
-      <li>Binary classification using ML models</li>
-    </ul>
-  </section>
+<div class="slide">
+  <h2>Objectives</h2>
+  <ul>
+    <li>Detect spam messages</li>
+    <li>Improve email/SMS security</li>
+    <li>Reduce unwanted messages</li>
+  </ul>
+</div>
 
-  <!-- Slide 4 -->
-  <section class="slide">
-    <h2>Objectives</h2>
-    <ul>
-      <li>Build an accurate spam detection model</li>
-      <li>Classify emails automatically</li>
-      <li>Improve accuracy using feature engineering</li>
-    </ul>
-  </section>
+<div class="slide">
+  <h2>Tools & Technologies</h2>
+  <ul>
+    <li>Python</li>
+    <li>Pandas & NumPy</li>
+    <li>Scikit-learn</li>
+    <li>TF-IDF</li>
+    <li>Jupyter Notebook</li>
+  </ul>
+</div>
 
-  <!-- Slide 5 -->
-  <section class="slide">
-    <h2>Assumptions</h2>
-    <ul>
-      <li>Dataset is properly labeled</li>
-      <li>Data is available in CSV format</li>
-      <li>Project is for academic purpose</li>
-    </ul>
-  </section>
+<div class="slide">
+  <h2>Dataset</h2>
+  <p>SMS/Email dataset with spam and non-spam labels.</p>
+</div>
 
-  <!-- Slide 6 -->
-  <section class="slide">
-    <h2>Tools & Technologies</h2>
-    <ul>
-      <li>Python</li>
-      <li>Pandas & NumPy</li>
-      <li>Scikit-learn</li>
-      <li>TF-IDF / CountVectorizer</li>
-      <li>Jupyter Notebook</li>
-    </ul>
-  </section>
+<div class="slide">
+  <h2>Methodology</h2>
+  <ul>
+    <li>Data Collection</li>
+    <li>Text Preprocessing</li>
+    <li>Feature Extraction</li>
+    <li>Model Training</li>
+    <li>Evaluation</li>
+  </ul>
+</div>
 
-  <!-- Slide 7 -->
-  <section class="slide">
-    <h2>Machine Learning Models</h2>
-    <ul>
-      <li>Logistic Regression</li>
-      <li>Naive Bayes</li>
-      <li>Binary Classification</li>
-    </ul>
-  </section>
+<div class="slide">
+  <h2>Machine Learning Model</h2>
+  <ul>
+    <li>Naive Bayes</li>
+    <li>Supervised Learning</li>
+    <li>Binary Classification</li>
+  </ul>
+</div>
 
-  <!-- Slide 8 -->
-  <section class="slide">
-    <h2>Evaluation Metrics</h2>
-    <ul>
-      <li>Accuracy</li>
-      <li>Precision</li>
-      <li>Recall</li>
-    </ul>
-  </section>
+<div class="slide">
+  <h2>Evaluation Metrics</h2>
+  <ul>
+    <li>Accuracy</li>
+    <li>Precision</li>
+    <li>Recall</li>
+  </ul>
+</div>
 
-  <!-- Slide 9 -->
-  <section class="slide">
-    <h2>Timeline</h2>
-    <ul>
-      <li>Data Collection & Preprocessing</li>
-      <li>Feature Extraction</li>
-      <li>Model Training & Evaluation</li>
-      <li>Optimization & Documentation</li>
-    </ul>
-  </section>
+<div class="slide">
+  <h2>Results</h2>
+  <p>Model achieved high accuracy in detecting spam messages.</p>
+</div>
 
-  <!-- Slide 10 -->
-  <section class="slide">
-    <h2>Conclusion</h2>
-    <p>
-      This project demonstrates how Machine Learning and text processing
-      techniques can be effectively used to detect spam emails and improve
-      email security.
-    </p>
-  </section>
+<div class="slide">
+  <h2>Conclusion</h2>
+  <p>Machine Learning effectively detects spam and improves communication security.</p>
+</div>
 
-  <div class="footer">← / → to navigate</div>
+<div class="slide">
+  <h2>Thank You</h2>
+  <p>Questions?</p>
+</div>
 
-  <script>
-    const slides = document.querySelectorAll(".slide");
-    let index = 0;
+<div class="footer">Use ← → arrow keys</div>
 
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "ArrowRight") {
-        slides[index].classList.remove("active");
-        index = (index + 1) % slides.length;
-        slides[index].classList.add("active");
-      }
-      if (e.key === "ArrowLeft") {
-        slides[index].classList.remove("active");
-        index = (index - 1 + slides.length) % slides.length;
-        slides[index].classList.add("active");
-      }
-    });
-  </script>
+<script>
+const slides = document.querySelectorAll('.slide');
+let i = 0;
+document.addEventListener('keydown', e => {
+  slides[i].classList.remove('active');
+  if (e.key === 'ArrowRight') i = (i + 1) % slides.length;
+  if (e.key === 'ArrowLeft') i = (i - 1 + slides.length) % slides.length;
+  slides[i].classList.add('active');
+});
+</script>
 
 </body>
 </html>
